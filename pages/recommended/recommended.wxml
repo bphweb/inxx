@@ -1,0 +1,233 @@
+<!--pages/recommended/recommended.wxml-->
+<view class="main">
+     <!--评论弹框-->
+    <view class="have_comments {{changeH}}" catchtouchmove="preventD">
+        <view class="vip-member">
+            <view class="vip-detail">
+                <view>头像</view>
+                <text>Fiboon</text>
+                <text>V3</text>
+                <text>精</text>
+            </view>
+            <view>1小时前</view>
+        </view>
+        <view class="one-image">
+            <image src="../../utils/img/11.jpg" mode="aspectFill"></image>
+            <!--相关商品-->
+            <view class="products">
+                <view>
+                    <text>这套衣服很好看</text>
+                    <text bindtap="bindChange">相关商品</text>
+                </view>
+                <view class="in_products {{isShow}}">
+                    <scroll-view scroll-x="true">
+                        <view><image src="../../utils/img/11.jpg" mode="aspectFill"></image></view>
+                        <view><image src="../../utils/img/11.jpg" mode="aspectFill"></image></view>
+                        <view><image src="../../utils/img/11.jpg" mode="aspectFill"></image></view>
+                        <view><image src="../../utils/img/11.jpg" mode="aspectFill"></image></view>
+                    </scroll-view>
+                </view>
+            </view>
+        </view>
+        <view class="lookups">
+            <view class="comments">
+                <text>评论</text>
+                <text>210</text>
+            </view>
+            <view class="lookups-icon">
+                <view class="like-img">
+                    <image src="../../utils/img/like.png" mode="aspectFit"/>
+                </view>
+                <view class="collection-img">
+                    <image src="../../utils/img/star.png" mode="aspectFit"/>
+                </view>
+                <view class="share"><image src="../../utils/img/sharer.png" mode="aspectFit"/></view>
+            </view>
+        </view>
+        <view class="comments_open">
+            <view class="comment_open">
+                <view class="user">
+                    <view class="user_img"><image src="../../utils/img/head.jpg" mode="aspectFit"></image></view>
+                    <view class="user_name">
+                        <view>String</view>
+                        <view>很潮</view>
+                    </view>
+                    <view class="user_level"><text>V3</text></view>
+                </view>
+                <view class="time_m">1分钟前</view>
+            </view>
+            <view class="comment_open">
+                <view class="user">
+                    <view class="user_img"><image src="../../utils/img/head.jpg" mode="aspectFit"></image></view>
+                    <view class="user_name">
+                        <view>String</view>
+                        <view>很潮</view>
+                    </view>
+                    <view class="user_level"><text>V3</text></view>
+                </view>
+                <view class="time_m">1分钟前</view>
+            </view>
+        </view>
+        <view class="combobox">
+            <input type="text" name="leaveText" placeholder="说出你的想法..."/>
+            <view class='send_btn'>
+                <text>发送</text>
+            </view>
+        </view>
+    </view>
+    <!--个人商品-->
+    <view class="activityInfo">
+        <block wx:for="{{list}}" wx:key="item.id">
+        <!--个人信息-->
+        <view class="vip-member">
+            <view class="vip-detail">
+                <view><image src="{{item.avatar}}" mode="aspectFit" binderror="" bindload=""></image></view>
+                <text>{{item.user_nickname}}</text>
+                <text>{{item.grade}}</text>
+                <text>精</text>
+            </view>
+            <view>1小时前</view>
+        </view>
+        <!--一张大图-->
+        <view class="one-image" wx:if="{{item.img.length==1}}">
+            <block wx:for="{{item.img}}" wx:for-index="imgI" wx:for-item="imgItem">
+                <image src="{{imgItem}}" mode="aspectFill"></image>
+            </block>
+            <!--相关商品-->
+            <view class="products">
+                <view>
+                    <text>这套衣服很好看</text>
+                    <text bindtap="bindChange">相关商品</text>
+                </view>
+                <view class="in_products {{isShow}}">
+                    <scroll-view scroll-x="true">
+                        <view><image src="../../utils/img/11.jpg" mode="aspectFill"></image></view>
+                        <view><image src="../../utils/img/11.jpg" mode="aspectFill"></image></view>
+                        <view><image src="../../utils/img/11.jpg" mode="aspectFill"></image></view>
+                        <view><image src="../../utils/img/11.jpg" mode="aspectFill"></image></view>
+                    </scroll-view>
+                </view>
+            </view>
+        </view>
+        <!--两张大图-->
+        <view class="two-image" wx:if="{{item.img.length==2}}">
+            <!--主图-->
+            <view class="svip-image">
+                <swiper autoplay="true" display-multiple-items="1.5" circular="true"> 
+                    <block wx:for="{{item.img}}" wx:for-index="imgI" wx:for-item="imgItem">
+                        <swiper-item>
+                            <view class="item">
+                                <view class="one-pic">
+                                    <image src="{{imgItem}}" mode="aspectFill"></image>
+                                    <view>
+                                        <view><text>500</text><text>1800</text></view>
+                                        <view>
+                                            <text>{{countHour}}:</text>
+                                            <text>{{countMinute}}:</text>
+                                            <text>{{countSecond}}</text>
+                                        </view>
+                                    </view>
+                                </view>
+                            </view>
+                        </swiper-item>
+                    </block>
+                </swiper>
+            </view>
+            <!--好友助力-->
+            <view class="helper">
+                <view>+</view>
+                <view>+</view>
+                <view>+</view>
+                <view>+</view>
+                <view>+</view>
+                <text>好友助力抢购</text>
+            </view>
+        </view>
+        <!--三张大图-->
+        <view class="three-image" wx:if="{{item.img.length==3}}">
+            <view class="pics">
+                <block wx:for="{{item.img}}" wx:for-index="imgI" wx:for-item="imgItem">
+                    <view><image class="img-b" src="{{imgItem}}" mode="aspectFill" binderror="" bindload=""></image></view>
+                </block>
+            </view>
+            <view class="subtitles">
+                <view>狂潮双11|李希侃亲临inxxstreet</view>
+                <view>小狐狸李希侃11.11现身inxxstreet杭州湖滨银泰店</view>
+            </view>
+        </view>
+        <!--四张大图-->
+        <view class="four-image" wx:if="{{item.img.length==4}}">
+            <view class="pics">
+                <block wx:for="{{item.img}}" wx:for-index="imgI" wx:for-item="imgItem">
+                    <view>
+                        <image src="{{imgItem}}" mode="aspectFill"></image>
+                    </view>
+                </block>
+            </view>
+            <view class="subtitles">
+                <view>狂潮双11|李希侃亲临inxxstreet</view>
+                <view>小狐狸李希侃11.11现身inxxstreet杭州湖滨银泰店</view>
+            </view>
+        </view>
+        <!--五张大图-->
+        <view class="five-image" wx:if="{{item.img.length==5}}">
+            <view class="pics">
+                <view class="imgArr" >
+                    <block wx:for="{{item.img}}" wx:for-index="imgI" wx:for-item="imgItem">
+                        <view>
+                            <image class="img-a" src="{{imgItem}}" mode="aspectFill"></image>
+                        </view>
+                    </block>
+                </view>
+            </view>
+            <view class="subtitles">
+                <view>狂潮双11|李希侃亲临inxxstreet</view>
+                <view>小狐狸李希侃11.11现身inxxstreet杭州湖滨银泰店</view>
+            </view>
+        </view>
+        <!--六张图片-->
+        <view class="six-image" wx:if="{{item.img.length==6}}">
+            <view class="img-list">
+                <block wx:for="{{item.img}}" wx:for-index="imgI" wx:for-item="imgItem">
+                    <view><image class="img-c" src="{{imgItem}}" mode="aspectFill"></image></view>
+                </block>
+            </view>
+        </view>
+        <!--更多图片-->
+        <view class="more-img" wx:if="{{item.img.length==9}}">
+            <view class="pics">
+                <block wx:for="{{item.img}}" wx:for-index="imgI" wx:for-item="imgItem">
+                    <view><image src="{{imgItem}}" mode="aspectFill"></image></view>
+                </block>
+            </view>
+            <view class="subtitles">
+                <text>2018SS VIP限定框 第一期</text>
+            </view>
+        </view>
+        <!--评论-点赞-分享-->
+        <view class="lookups">
+            <view class="comments">
+                <text bindtap="setBounced">评论</text>
+                <text>210</text>
+            </view>
+            <view class="lookups-icon">
+                <view class="like-img"> <!-- bindtap="zan" data-index='{{index}}' data-like='{{item.like}}'-->
+                    <image src="../../utils/img/like.png" mode="aspectFit"/>    <!-- wx:if="{{item.like==false}}" -->
+                    <!--<image src="../../utils/img/like1.png" mode="aspectFit" wx:if="{{item.like==true}}"/>
+                    <view class="{{item.like==true?'active':''}}">{{item.num}}</view>-->
+                </view>
+                <view class="collection-img"> <!-- bindtap="collected" data-index='{{index}}'-->
+                    <image src="../../utils/img/star.png" mode="aspectFit"/> <!-- wx:if="{{item.collection==false}}"-->
+                    <!--<image src="../../utils/img/star1.png" mode="aspectFit" wx:if="{{item.collection==true}}"/>-->
+                </view>
+                <view class="share"><image src="../../utils/img/sharer.png" mode="aspectFit"/></view>
+            </view>
+        </view>
+        </block>
+        <view>
+            <image class="sweep {{aa}}" bindtap="handShow" src="../../utils/img/barcode.png" mode="aspectFill"></image>
+            <image class="camera {{bb}}" bindtap="handShow" src="../../utils/img/photo.png" mode="aspectFill"></image>
+        </view>
+    </view>
+</view>
+

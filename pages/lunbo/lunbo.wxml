@@ -1,0 +1,164 @@
+<!--pages/home/home.wxml-->
+<view class="header">
+  <view class="logo-box"><image class="logo" mode="aspectFill" lazy-load src="/pages/img/logo.png"></image></view>
+  <view class="info">
+    <image class="info-box" mode="aspectFit" lazy-load src="/pages/img/info.png"></image>
+    <text class="info-text">23</text>
+  </view>
+</view>
+<view class="title">
+  <image class="title-text" mode="widthFix" lazy-load src="/pages/img/title.png"/>
+</view>
+<view class="head-photo"><image hidden="{{istrue}}" src="../img/hp.png" mode="widthFix" lazy-load></image></view>
+<view class="swiper-box">
+  <swiper vertical="true" current="{{currentSwiper}}" bindchange="swiperChange">
+    <block>
+      <swiper-item class="big-item">
+        <view class="member">
+          
+          <view class="tit">LV.5</view>
+          <progress percent="76" color="#000" stroke-width="6rpx" active="true"/>
+          <view class="pct">
+            <text>5200</text>
+            <text>/</text>
+            <text>6800</text>
+          </view>
+          <view class="inte">
+            <text>当前剩余积分：</text>
+            <text>1200</text>
+          </view>
+          <view class="bcode">
+            <view class="bcode-tit">
+              <text>BARCODE </text>
+              <text>会员码</text>
+            </view>
+            <view class="barcode">
+              <canvas canvas-id="barcode" />
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="discounts">
+          <view class="one">20% OFF</view>
+          <view class="two">
+            <view>520甜蜜特惠八折劵</view>
+            <text>2018.5.14-2018.5.20</text>
+          </view>
+          <view class="barcode1">
+            <canvas canvas-id="barcode1" />
+          </view>
+        </view>
+        <view class="discounts-a">
+          <view class="one"><image src="../img/DSC_9067.png" mode="aspectFill"></image></view>
+          <view class="two">
+            <view>520甜蜜特惠八折劵</view>
+            <text>2018.5.14-2018.5.20</text>
+          </view>
+          <view class="barcode2">
+            <canvas canvas-id="barcode2" />
+          </view>
+        </view>
+        <view class="discounts-b">
+          <view class="one">20% OFF</view>
+          <view class="two">
+            <view>520甜蜜特惠八折劵</view>
+            <text>2018.5.14-2018.5.20</text>
+          </view>
+          <view class="barcode3">
+            <canvas canvas-id="barcode3" />
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="address">
+          <image src="../img/address.png" mode="widthFix"></image>
+          <view class="address-card" wx:for="{{list}}" wx:key="i.id" wx:for-item="i">
+            <view  class="add-icon"><image src="{{i.img_url}}" mode="widthFix"></image></view>
+            <view class="des">
+              <view class="store">
+                <text>{{i.store}}</text>
+                <text>{{i.road}}km</text>
+              </view>
+              <view class="add">
+                <text>{{i.add}}</text>
+                <view class="skip"></view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="act">
+          <view class="act-img"><image src="../img/activity.png" mode="widthFix"></image></view>
+          <view class="act-info">
+            <view>
+              <text>INXX南京店\t庆祝开店\n全场5折起</text>
+            </view>
+            <view class="square"></view>
+          </view>
+          <view class="act-info">
+            <view>
+              <text>INXX南京店\t庆祝开店\n全场5折起</text>
+            </view>
+            <view class="square"></view>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="rec">
+          <view class="rec-img"><image src="../img/rec.png" mode="widthFix"></image></view>
+          <view class="st">
+            <text class="sgu">共消费<text>5</text>单</text>
+            <text class="total">合计<text>￥10570.00</text></text>
+          </view>
+          <view class="mon">
+            <view class="tt">
+              <view class="mon-date"><text>2018.04.02</text><text>Mon</text></view>
+              <view class="mon-price"><text>￥2570.00</text><text>INXX杭州嘉里中心店</text></view>
+            </view>
+            <view class="divider"></view>
+            <view class="tt">
+              <view class="mon-date"><text>2018.04.02</text><text>Mon</text></view>
+              <view class="mon-price"><text>￥2570.00</text><text>INXX杭州嘉里中心店</text></view>
+            </view>
+          </view>
+          <view class="more">
+            <text>更多消费记录</text>
+            <view class="boult"></view>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <image class="big-img" src="/pages/img/lun.png"></image>
+        <view class="detail">
+          <view class="coupon">
+            <view class="one">
+              <text>INXX限量手机壳</text>
+              <text>礼品卷</text>
+            </view>
+            <view><image class="sjk" mode="aspectFit" lazy-load src="/pages/img/DSC_9067.png"></image></view>
+          </view>
+          <view class="divider"></view>
+          <view class="coupon">
+            <view class="one">
+              <text>INXX限量手机壳</text>
+              <text>礼品卷</text>
+            </view>
+            <view class="two"><text>￥50</text></view>
+          </view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="dots">
+    <view>
+      <block  wx:for="{{swiper_arr}}" wx:key="swiper_arr.id">
+        <view class="dot{{index == currentSwiper ? ' active' : ''}}"></view>
+      </block>
+    </view>
+    <view class="arrow" wx:if="{{currentSwiper!=5}}"></view>
+    <view class="arrow_top" wx:else></view>
+</view> 
+</view>
+

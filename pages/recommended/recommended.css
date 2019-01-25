@@ -1,0 +1,492 @@
+.main {
+  padding: 0 20rpx;
+  font-size: 14px;
+  margin-bottom: 120rpx;
+  position: relative;
+}
+/**个人信息**/
+.vip-member {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20rpx;
+}
+.vip-member .vip-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.vip-member .vip-detail view {
+  width: 60rpx;
+  height: 60rpx;
+  border: 1rpx solid #000;
+  border-radius: 50%;
+  margin-right: 20rpx;
+  overflow: hidden;
+}
+.vip-member .vip-detail view image {
+  width: 100%;
+  height: 100%;
+}
+.vip-member .vip-detail text {
+  font-size: 24rpx;
+  margin-right: 20rpx;
+}
+.vip-member .vip-detail text:nth-child(3) {
+  text-align: center;
+  font-size: 18rpx;
+  border-radius: 50%;
+  background: #000;
+  color: #fff;
+  overflow: hidden;
+  padding: 5rpx;
+  border: 5rpx solid #aaa;
+}
+.vip-member .vip-detail text:last-child {
+  padding: 0 5rpx;
+  background: red;
+  color: #fff;
+}
+/**一张大图**/
+.one-image {
+  margin-top: 10rpx;
+}
+.one-image image {
+  width: 100%;
+}
+/**两张大图**/
+.two-image .svip-image swiper {
+  height: 550rpx;
+}
+.two-image .svip-image swiper swiper-item {
+  height: 550rpx;
+}
+.two-image .svip-image swiper swiper-item .item {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10rpx;
+}
+.two-image .svip-image swiper swiper-item .item .one-pic {
+  width: 460rpx;
+  height: 480rpx;
+}
+.two-image .svip-image swiper swiper-item .item .one-pic image {
+  width: 100%;
+  height: 100%;
+}
+.two-image .svip-image swiper swiper-item .item .one-pic view {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+}
+.two-image .svip-image swiper swiper-item .item .one-pic view:first-child text:first-child {
+  font-weight: 600;
+}
+.two-image .svip-image swiper swiper-item .item .one-pic view:first-child text:last-child {
+  text-decoration: line-through;
+  font-size: 12px;
+}
+.two-image .svip-image swiper swiper-item .item .two-pic {
+  width: 460rpx;
+  height: 480rpx;
+}
+.two-image .svip-image swiper swiper-item .item .two-pic image {
+  width: 100%;
+  height: 100%;
+}
+.two-image .svip-image swiper swiper-item .item .two-pic view {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 16px;
+}
+.two-image .svip-image swiper swiper-item .item .two-pic view text:first-child {
+  font-weight: 600;
+  margin-right: 10rpx;
+}
+.two-image .svip-image swiper swiper-item .item .two-pic view text:last-child {
+  text-decoration: line-through;
+  font-size: 12px;
+}
+.two-image .helper {
+  display: flex;
+}
+.two-image .helper view {
+  width: 40rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+  border: 1rpx solid #000;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+/**三张大图**/
+.three-image {
+  margin-top: 10rpx;
+}
+.three-image .pics {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 10rpx;
+  position: relative;
+}
+.three-image .pics view:nth-child(1) {
+  width: 450rpx;
+  height: 450rpx;
+}
+.three-image .pics view:nth-child(1) .img-b {
+  width: 100%;
+  height: 100%;
+}
+.three-image .pics view:nth-child(2),
+.three-image .pics view:nth-child(3) {
+  width: 250rpx;
+  height: 220rpx;
+}
+.three-image .pics view:nth-child(2) .img-b,
+.three-image .pics view:nth-child(3) .img-b {
+  width: 100%;
+  height: 100%;
+}
+.three-image .pics view:nth-child(3) {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.three-image .subtitles {
+  margin-top: 10rpx;
+}
+.three-image .subtitles view:nth-child(1) {
+  font-weight: 600;
+}
+.three-image .subtitles view:nth-child(2) {
+  color: #ccc;
+  font-size: 12px;
+}
+/**四张大图**/
+.four-image {
+  margin-top: 10rpx;
+}
+.four-image .pics {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.four-image .pics view {
+  width: 350rpx;
+  height: 350rpx;
+  margin-bottom: 10rpx;
+}
+.four-image .pics view image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.four-image .subtitles {
+  margin-top: 10rpx;
+}
+.four-image .subtitles view:nth-child(1) {
+  font-weight: 600;
+}
+.four-image .subtitles view:nth-child(2) {
+  color: #ccc;
+  font-size: 12px;
+}
+/**五张大图**/
+.five-image {
+  margin-top: 10rpx;
+}
+.five-image .pics .imgArr {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.five-image .pics .imgArr view {
+  width: 230rpx;
+  height: 230rpx;
+  margin-top: 10rpx;
+}
+.five-image .pics .imgArr view .img-a {
+  width: 100%;
+  height: 100%;
+}
+.five-image .pics .imgArr :nth-child(1),
+.five-image .pics .imgArr :nth-child(2) {
+  width: 350rpx;
+  height: 350rpx;
+}
+.five-image .pics .imgArr :nth-child(1) .img-a,
+.five-image .pics .imgArr :nth-child(2) .img-a {
+  width: 100%;
+  height: 100%;
+}
+.five-image .subtitles {
+  margin-top: 20rpx;
+}
+.five-image .subtitles view:nth-child(1) {
+  font-weight: 600;
+}
+.five-image .subtitles view:nth-child(2) {
+  color: #ccc;
+  font-size: 12px;
+}
+.six-image {
+  margin-top: 10rpx;
+}
+.six-image .img-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 10rpx;
+  position: relative;
+}
+.six-image .img-list view:nth-child(1) {
+  width: 450rpx;
+  height: 450rpx;
+  margin-bottom: 10rpx;
+}
+.six-image .img-list view:nth-child(1) .img-c {
+  width: 100%;
+  height: 100%;
+}
+.six-image .img-list view:nth-child(2),
+.six-image .img-list view:nth-child(3) {
+  width: 250rpx;
+  height: 220rpx;
+}
+.six-image .img-list view:nth-child(2) .img-c,
+.six-image .img-list view:nth-child(3) .img-c {
+  width: 100%;
+  height: 100%;
+}
+.six-image .img-list view:nth-child(3) {
+  position: absolute;
+  bottom: 240rpx;
+  right: 0;
+}
+.six-image .img-list view:nth-child(4),
+.six-image .img-list view:nth-child(5),
+.six-image .img-list view:nth-child(6) {
+  width: 230rpx;
+  height: 230rpx;
+}
+.six-image .img-list view:nth-child(4) .img-c,
+.six-image .img-list view:nth-child(5) .img-c,
+.six-image .img-list view:nth-child(6) .img-c {
+  width: 100%;
+  height: 100%;
+}
+/**更多图片**/
+.more-img .pics {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.more-img .pics view {
+  width: 230rpx;
+  height: 230rpx;
+  margin-top: 10rpx;
+}
+.more-img .pics view image {
+  width: 100%;
+  height: 100%;
+}
+.more-img .subtitles {
+  margin-top: 20rpx;
+}
+/**相关商品**/
+.products {
+  margin-top: 20rpx;
+}
+.products view:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10rpx;
+  font-size: 22rpx;
+}
+.products view:first-child text:last-child {
+  border: 1rpx solid #000;
+  padding: 5rpx;
+  background: #000;
+  color: #fff;
+}
+.products .in_products {
+  height: 0;
+  transition: all 1s ease 0s;
+  overflow: hidden;
+}
+.products .in_products scroll-view {
+  height: 200rpx;
+  white-space: nowrap;
+  background: #ccc;
+}
+.products .in_products scroll-view view {
+  width: 200rpx;
+  height: 180rpx;
+  display: inline-block;
+  padding: 10rpx;
+}
+.products .in_products scroll-view view image {
+  width: 100%;
+  height: 100%;
+}
+.products .slideUp {
+  height: 200rpx;
+}
+/**评论-点赞-收藏**/
+.lookups {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #000;
+  margin-bottom: 30rpx;
+  padding: 10rpx 0;
+  font-size: 18rpx;
+}
+.lookups text:first-child {
+  border: 1rpx solid #000;
+  padding: 5rpx 10rpx;
+  border-radius: 10rpx;
+  margin-right: 5rpx;
+  background: #000;
+  color: #fff;
+}
+.lookups .lookups-icon {
+  display: flex;
+  position: relative;
+  padding: 15rpx 0;
+}
+.lookups .lookups-icon view image {
+  width: 45rpx;
+  height: 45rpx;
+  margin-left: 30rpx;
+}
+.lookups .lookups-icon .share {
+  padding-top: 5rpx;
+}
+.lookups .lookups-icon .share image {
+  width: 40rpx;
+  height: 40rpx;
+}
+.lookups .lookups-icon .like-img view {
+  width: 20rpx;
+  height: 20rpx;
+  font-size: 8px;
+  border: 1rpx solid #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 40rpx;
+  left: 60rpx;
+  background: #fff;
+  text-align: center;
+  line-height: 20rpx;
+}
+.lookups .lookups-icon .like-img view.active {
+  color: red;
+  border: red 1rpx solid;
+}
+.activityInfo {
+  position: relative;
+}
+.activityInfo .sweep {
+  position: fixed;
+  bottom: 30rpx;
+  right: 30rpx;
+  z-index: 1000;
+  width: 150rpx;
+  height: 80rpx;
+  border: 1rpx solid #000;
+  padding: 5rpx;
+  background: #fff;
+  transition: all .2s 0s ease;
+}
+.activityInfo .sweep1 {
+  right: -200rpx;
+}
+.activityInfo .camera {
+  width: 80rpx;
+  height: 60rpx;
+  position: fixed;
+  bottom: -60rpx;
+  right: 30rpx;
+  z-index: 100;
+  transition: all .3s 0s ease;
+}
+.activityInfo .camera2 {
+  bottom: 60rpx;
+}
+.have_comments {
+  width: 100%;
+  background: #fff;
+  height: 100%;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  transition: all .5s ease 0s;
+  transform: scale(0);
+  overflow: hidden;
+}
+.have_comments .comments_open .comment_open {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #ccc;
+  padding-bottom: 10rpx;
+  margin-top: 10rpx;
+}
+.have_comments .comments_open .comment_open .user {
+  display: flex;
+  align-items: flex-start;
+}
+.have_comments .comments_open .comment_open .user .user_img {
+  width: 82rpx;
+  height: 82rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20rpx;
+}
+.have_comments .comments_open .comment_open .user .user_img image {
+  width: 100%;
+  height: 100%;
+}
+.have_comments .comments_open .comment_open .user .user_name {
+  margin-right: 20rpx;
+}
+.have_comments .comments_open .comment_open .user .user_name view:last-child {
+  margin-top: 5rpx;
+}
+.have_comments .comments_open .comment_open .user .user_level text {
+  border: 5rpx solid #aaa;
+  background: #000;
+  color: #fff;
+  padding: 5rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  font-size: 22rpx;
+}
+.have_comments .combobox {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.have_comments .combobox input {
+  width: 600rpx;
+  background: #dadada;
+  padding: 20rpx;
+}
+.have_comments .combobox .send_btn {
+  width: 120rpx;
+  background: #d96464;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.changeHeight {
+  transform: scale(1, 1);
+}

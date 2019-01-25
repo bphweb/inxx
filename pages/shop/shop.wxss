@@ -1,0 +1,41 @@
+.commodity {
+  text-align: center;
+  margin: 0 auto;
+}
+.commodity .logo {
+  margin-top: 170rpx;
+}
+.commodity .logo image {
+  width: 250rpx;
+  height: 100%;
+}
+.commodity .items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 150rpx;
+  padding: 0 150rpx;
+}
+.commodity .items .inxx,
+.commodity .items .street,
+.commodity .items .sports {
+  width: 100%;
+  margin-top: 80rpx;
+  border: 1rpx solid #000;
+  display: flex;
+  justify-content: flex-end;
+}
+.commodity .items .inxx view:first-child,
+.commodity .items .street view:first-child,
+.commodity .items .sports view:first-child {
+  width: 100%;
+  padding: 20rpx;
+  line-height: 55rpx;
+  border-right: 1rpx solid #000;
+}
+.commodity .items .inxx view:last-child,
+.commodity .items .street view:last-child,
+.commodity .items .sports view:last-child {
+  writing-mode: vertical-rl;
+  font-size: 12px;
+}

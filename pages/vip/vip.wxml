@@ -1,0 +1,23 @@
+<!--pages/vip/vip.wxml-->
+<view class="myVip">
+    <!--头像id-->
+    <view class="header">
+        <view class="header-a"><image src="../../utils/img/head.jpg" mode="aspectFill"></image></view>
+        <view class="header-b">
+            <view>
+                <text>白头</text>
+                <text>V2</text>
+                <text>(7500/8000)</text>
+            </view>
+            <view>
+                <text>可用积分</text>
+                <text>7800</text>
+            </view>
+            <view>
+                <text>充值余额</text>
+                <text>5000</text>
+            </view>
+        </view>
+    </view>
+    
+</view>

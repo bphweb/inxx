@@ -1,0 +1,36 @@
+@border:1rpx solid #000;
+.commodity {
+    text-align: center;
+    margin:0 auto;
+    .logo {
+        margin-top:170rpx;
+        image {
+            width:250rpx;
+            height:100%;
+        }
+    }
+    .items{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top:150rpx;
+        padding:0 150rpx;
+        .inxx,.street,.sports{
+            width:100%;
+            margin-top:80rpx;
+            border:@border;
+            display: flex;
+            justify-content: flex-end;
+            view:first-child{
+                width:100%;
+                padding:20rpx;
+                line-height: 55rpx;
+                border-right: @border;
+            }
+            view:last-child{
+                writing-mode:vertical-rl;
+                font-size:12px;
+            }
+        }
+    }
+}

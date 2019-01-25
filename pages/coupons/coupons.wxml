@@ -1,0 +1,74 @@
+<!--pages/coupons/coupons.wxml-->
+<!--头部-->
+<view class="header">
+  <view class="box">
+    <view class="mygt"></view>
+    <image class="coupons" src="/pages/img/coupons.png" mode="widthFix"></image>
+    <view>
+      <image class="info" src="/pages/img/info.png" mode="widthFix"></image>
+      <text class="info-num">23</text>
+    </view>
+  </view>
+</view>
+<view class="main">
+    <!--有效劵-->
+    <view class="position-box">
+      <view class="active-vol">
+        <view class="vol">
+          <view class="title">
+            <text>520甜蜜特惠</text>
+            <text>2018.5.14-2018.5.20</text>
+          </view>
+          <view class="price">￥50</view>
+        </view>
+        <view class="vol">
+          <view class="title">
+            <text>520甜蜜特惠</text>
+            <text>2018.5.14-2018.5.20</text>
+          </view>
+          <view class="price">￥50</view>
+        </view>
+        <view class="vol">
+          <view class="title">
+            <text>520甜蜜特惠</text>
+            <text>2018.5.14-2018.5.20</text>
+          </view>
+          <view class="price">￥50</view>
+        </view>
+      </view>
+      <!--失效劵-->
+      <view class="failure-vol">
+        <view class="fail-title">
+          <text class="left-line"></text><text>已失效的劵</text><text class="right-line"></text>
+        </view>
+        <view class="vol fail-bg">
+          <view class="title">
+            <text>520甜蜜特惠</text>
+            <text>2018.5.14-2018.5.20</text>
+          </view>
+          <view class="price">￥50</view>
+        </view>
+        <view class="vol fail-bg">
+            <view class="title">
+              <text>520甜蜜特惠</text>
+              <text>2018.5.14-2018.5.20</text>
+            </view>
+            <view class="price">￥50</view>
+          </view>
+      </view>
+      <!--清空-->
+      <view class="emp" bindtap="showDialog">
+        <image src="/pages/img/bin.png" mode="widthFix" lazy-load></image>
+        <text>清空</text>
+      </view>
+    </view>
+</view>
+<!--自定义模态框-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-title">确定清空失效的劵吗？</view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">清空</view>
+  </view>
+</view>

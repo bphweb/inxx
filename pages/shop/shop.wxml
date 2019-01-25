@@ -1,0 +1,18 @@
+<!--pages/shop/shop.wxml-->
+<view class="commodity">
+    <view class="logo"><image src="../../utils/img/logo.png" mode="widthFix"></image></view>
+    <view class="items">
+        <view class="inxx">
+            <view>INXX</view>
+            <view>高街潮牌</view>
+        </view>
+        <view class="street">
+            <view>inxx street</view>
+            <view>街头潮牌</view>
+        </view>
+        <view class="sports">
+            <view>inxx sports</view>
+            <view>运动潮牌</view>
+        </view>
+    </view>
+</view>

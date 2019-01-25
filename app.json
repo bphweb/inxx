@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/recommended/recommended",
+    "pages/releases/releases",
+    
+    "pages/coupons/coupons",
+    "pages/lunbo/lunbo",
+    "pages/vip/vip",
+    "pages/shop/shop",
+    "pages/home/home",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/test/test"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "INXX",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/recommended/recommended",
+        "text": "推荐",
+        "iconPath": "images/recommend.png",
+        "selectedIconPath": "images/recommend.png"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "text": "商店",
+        "iconPath": "images/shop.png",
+        "selectedIconPath": "images/shop.png"
+      },
+      {
+        "pagePath": "pages/vip/vip",
+        "text": "专属",
+        "iconPath": "images/vip.png",
+        "selectedIconPath": "images/vip.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "我",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home.png"
+      }
+    ],
+    "color": "#000",
+    "backgroundColor": "#ccc"
+  }
+}

@@ -1,0 +1,182 @@
+<!--pages/home/home.wxml-->
+<view class="myHome">
+    <!--头像信息-->
+    <view class="inforMation">
+        <view class="headPhoto">
+            <view><image src="../../utils/img/head.jpg" mode="aspectFill" binderror="" bindload=""></image></view>
+            <view>SVIP</view>
+        </view> 
+        <view class="collection">
+            <view>Fiboon</view>
+            <view>7500/8000(升级)</view>
+        </view>
+        <view class="info">
+            <view><image src="../../utils/img/info.png" mode="aspectFill"></image></view>   
+            <view class="arrow"></view>
+        </view>
+    </view>
+    <!--条形码-->
+    <view class="barcode">
+        <canvas canvas-id="barcode"></canvas>
+    </view>
+    <!--积分-余额-->
+    <view class="inte-box">
+        <view class="inteGral">
+            <view class="inte">
+                <view>
+                    <text>可用积分</text>
+                    <text>10000</text>
+                </view>
+                <view>
+                    <text>充值余额</text>
+                    <text>1000(查看)</text>
+                </view>
+            </view>
+            <view class="shoppers" bindtap="bindShow">专属导购 ></view>
+        </view>
+        <!--导购信息-->
+        <view class="shoppers-item {{isShow}}">
+            <view class="dashed-box">
+                <view class="wx-num">
+                    <text>微信号:</text>
+                    <text>inxx001</text>
+                    <view><image src="../../utils/img/wx-num.png" mode="aspectFit"></image></view>
+                </view>
+                <view class="phone-num">
+                    <text>电话号码:</text>
+                    <text>0571-86791123</text>
+                    <view><image src="../../utils/img/phone.png" mode="aspectFit"></image></view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!--订单-消费选项卡-->
+    <view class="orders">
+        <view class="order-nav">
+            <view class="order {{currentData==0 ? 'tabColor' : ''}}" data-current = "0" bindtap="checkCurrent">商城订单</view>
+            <view class="consumption {{currentData==1 ? 'tabColor' : ''}}" data-current = "1" bindtap="checkCurrent">门店消费</view>
+        </view>
+        <swiper current="{{currentData}}" bindchange="bindChange">
+            <swiper-item>
+                <view class="order-tab">
+                    <view class="item">
+                        <view><image src="../../utils/img/all.png" mode="aspectFit"></image></view>
+                        <text>全部</text>
+                    </view>
+                    <view class="item">
+                        <view><image src="../../utils/img/no-pay.png" mode="aspectFit"></image></view>
+                        <text>待付款</text>
+                    </view>
+                    <view class="item">
+                        <view><image src="../../utils/img/no-send.png" mode="aspectFit"></image></view>
+                        <text>待发货</text>
+                    </view>
+                    <view class="item">
+                        <view><image src="../../utils/img/no-goods.png" mode="aspectFit"></image></view>
+                        <text>待收货</text>
+                    </view>
+                    <view class="item">
+                        <view><image src="../../utils/img/after-sale.png" mode="aspectFit"></image></view>
+                        <text>售后</text>
+                    </view>
+                </view>
+            </swiper-item>
+            <swiper-item>
+                <view class="consumption-tab">
+                    <view>
+                        <text>2018.07.30</text>
+                        <text>INXX湖滨银泰</text>
+                        <text>￥1112</text>
+                    </view>
+                    <view>
+                        <text>2018.07.30</text>
+                        <text>INXX湖滨银泰</text>
+                        <text>￥1112</text>
+                    </view>
+                    <view>
+                        <text>2018.07.30</text>
+                        <text>INXX湖滨银泰</text>
+                        <text>￥1112</text>
+                    </view>
+                </view>
+            </swiper-item>
+        </swiper>
+    </view>
+    <!--卡劵-->
+    <view class="cards">
+        <view class="card-title">
+            <view>卡劵</view>
+            <view>MORE</view>
+        </view>
+        <view class="card-util">
+            <view class="labelPeer">门店</view>
+            <view class="card">
+                <view>
+                    <text>520甜蜜特惠</text>
+                    <text>2018.5.14-2018.5.20</text>
+                </view>
+                <view>
+                    <text>￥50</text>
+                </view>
+            </view>
+        </view>
+        <view class="card-util">
+            <view class="labelPeer">商店</view>
+            <view class="card">
+                <view>
+                    <text>520甜蜜特惠</text>
+                    <text>2018.5.14-2018.5.20</text>
+                </view>
+                <view>
+                    <text>￥50</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <map
+    id="map"
+    longitude="120.132139"
+    latitude="30.297825"
+    scale="14"
+    controls="{{controls}}"
+    bindcontroltap="controltap"
+    markers="{{markers}}"
+    bindmarkertap="markertap"
+    polyline="{{polyline}}"
+    bindregionchange="regionchange"
+    show-location
+    style="width: 100%; height: 200rpx; border:5rpx solid #ccc; margin-top:30rpx; border-radius: 5rpx;"
+    ></map>
+    <view class="addr_list">
+        <view class="items">
+            <view class="mall">
+                <text>INXX杭州城西银泰</text>
+                <text>2.1km</text>
+            </view>
+            <view class="addr_id">
+                <text>杭州市拱墅区丰潭路380号，</text>
+                <text>铺位号：2f055</text>
+            </view>
+        </view>
+        <view class="items">
+            <view class="mall">
+                <text>INXX杭州城西银泰</text>
+                <text>2.1km</text>
+            </view>
+            <view class="addr_id">
+                <text>杭州市拱墅区丰潭路380号，</text>
+                <text>铺位号：2f055</text>
+            </view>
+        </view>
+        <view class="items">
+            <view class="mall">
+                <text>INXX杭州城西银泰</text>
+                <text>2.1km</text>
+            </view>
+            <view class="addr_id">
+                <text>杭州市拱墅区丰潭路380号，</text>
+                <text>铺位号：2f055</text>
+            </view>
+        </view>
+    </view>
+</view>

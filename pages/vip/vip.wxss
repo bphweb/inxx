@@ -1,0 +1,19 @@
+.myVip {
+  padding: 0 20rpx;
+}
+.myVip .header {
+  display: flex;
+}
+.myVip .header .header-a {
+  width: 190rpx;
+  height: 190rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.myVip .header .header-a image {
+  width: 100%;
+  height: 100%;
+}
+.myVip .header .header-b {
+  font-size: 24rpx;
+}
